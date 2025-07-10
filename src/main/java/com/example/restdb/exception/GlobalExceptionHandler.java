@@ -27,6 +27,7 @@ public class GlobalExceptionHandler {
     }
 
     // for ../employeessss, show 404 as well
+    // also added in application.properties
     @ExceptionHandler(NoHandlerFoundException.class)
     public ResponseEntity<ApiErrorResponse> handleNoHandlerFound(NoHandlerFoundException ex) {
         ApiErrorResponse error = new ApiErrorResponse(
